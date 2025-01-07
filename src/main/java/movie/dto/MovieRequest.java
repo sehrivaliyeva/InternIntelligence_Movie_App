@@ -1,14 +1,15 @@
 package movie.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
 
 @Getter
 @Setter
 public class MovieRequest {
+
     private String title;
     private String director;
-    private String releaseYear;
+    private String release_year;
     private String genre;
     private String IMDb;
 }

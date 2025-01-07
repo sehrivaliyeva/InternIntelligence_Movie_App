@@ -1,16 +1,16 @@
 package movie.dto;
 
-import jakarta.persistence.GeneratedValue;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 public class MovieResponse {
-    private Long id;
+
     private String title;
     private String director;
-    private String releaseYear;
+    private String release_year;
     private String genre;
     private String IMDb;
+
+
 }

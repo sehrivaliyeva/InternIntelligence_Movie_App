@@ -1,11 +1,10 @@
 package movie.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @Table
 @Entity
 @NoArgsConstructor
@@ -16,7 +15,7 @@ public class Movie {
     private Long id;
     private String title;
     private String director;
-    private String releaseYear;
+    private String release_year;
     private String genre;
     private String IMDb;
 }

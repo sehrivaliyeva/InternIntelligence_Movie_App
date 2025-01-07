@@ -1,6 +1,5 @@
 package movie.service;
 
-import lombok.RequiredArgsConstructor;
 import movie.dto.MovieRequest;
 import movie.dto.MovieResponse;
 import movie.entity.Movie;
@@ -8,10 +7,8 @@ import movie.mapper.MovieMapper;
 import movie.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 
@@ -33,9 +30,11 @@ public class MovieService {
         return movieMapper.toMovieResponse(movie);
     }
 
-    public void createMovie(@RequestBody MovieRequest movieRequest) {
-        movieRepository.save(movieMapper.toMovie(movieRequest));
+    public void createMovie( MovieRequest movieRequest) {
+        Movie movie = movieMapper.toMovie(movieRequest);
+        movieRepository.save(movie);
     }
+
 
 
     public void updateMovie(Long id, MovieRequest movieRequest) {
